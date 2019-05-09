@@ -1,0 +1,29 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5% 10%;
+}
+.navmenu {
+    display: flex;
+}
+.parentnav-item {
+    margin-right: 2em;
+}
+.navmenu a {
+    text-decoration: none;
+}
+.submenu {
+    display: none;
+}
+.parentnav-item:hover .submenu {
+    display: block;
+    position: absolute;
+    background-color: gainsboro;
+    padding: 0 1em;
+}
+.submenu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/*# sourceMappingURL=styles.chunk.css.map*/
