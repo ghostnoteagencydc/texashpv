@@ -26,7 +26,8 @@ class MyCalendar extends Component {
           title: e.title,
           allDay: e.acf.all_day,
           start: moment(e.acf.start).toDate(),
-          end: moment(e.acf.end).toDate()
+          end: moment(e.acf.end).toDate(),
+          approved: e.acf.approved
         }
         console.log(obj)
         return obj
