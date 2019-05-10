@@ -4803,6 +4803,50 @@ for (var i = 0; i < DOMIterables.length; i++) {
 
 /***/ }),
 
+/***/ "./node_modules/easy-cookie-manager/index.js":
+/*!***************************************************!*\
+  !*** ./node_modules/easy-cookie-manager/index.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+const cookie_functions = {
+  setCookie(cname, cvalue, exdays) {
+    var d = new Date()
+    d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000)
+    var expires = 'expires=' + d.toUTCString()
+    document.cookie =
+      cname + '=' + cvalue + ';' + expires + '; samesite=strict; path=/'
+  },
+  getCookie(cname) {
+    var name = cname + '='
+    var ca = document.cookie.split(';')
+    for (var i = 0; i < ca.length; i++) {
+      var c = ca[i]
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1)
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length)
+      }
+    }
+    return ''
+  },
+  deleteCookie(cname) {
+    cname = cname.toString()
+    var d = new Date()
+    d.setTime(d.getTime() + -5 * 24 * 60 * 60 * 1000)
+    var expires = 'expires=' + d.toUTCString()
+    document.cookie =
+      cname + '=' + ' ' + ';' + expires + '; samesite=strict; path=/'
+  }
+}
+
+module.exports = cookie_functions
+
+
+/***/ }),
+
 /***/ "./node_modules/isomorphic-unfetch/browser.js":
 /*!****************************************************!*\
   !*** ./node_modules/isomorphic-unfetch/browser.js ***!
@@ -10017,7 +10061,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(next_app__WEBPACK_IMPORTED_MODULE_12__);
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/isomorphic-unfetch/browser.js");
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var _utilities_cookies_functions__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../utilities/cookies_functions */ "./utilities/cookies_functions.js");
+/* harmony import */ var easy_cookie_manager__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! easy-cookie-manager */ "./node_modules/easy-cookie-manager/index.js");
+/* harmony import */ var easy_cookie_manager__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(easy_cookie_manager__WEBPACK_IMPORTED_MODULE_14__);
 /* harmony import */ var _components_shared_css__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../components/shared.css */ "./components/shared.css");
 /* harmony import */ var _components_shared_css__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_components_shared_css__WEBPACK_IMPORTED_MODULE_15__);
 
@@ -10071,7 +10116,7 @@ function (_App) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                token = _utilities_cookies_functions__WEBPACK_IMPORTED_MODULE_14__["default"].getCookie('hpv_usertoken39200');
+                token = easy_cookie_manager__WEBPACK_IMPORTED_MODULE_14___default.a.getCookie('hpv_usertoken39200');
 
                 if (!token) {
                   _context.next = 11;
@@ -10214,7 +10259,7 @@ function (_App) {
                     isLoggedIn: true
                   });
 
-                  _utilities_cookies_functions__WEBPACK_IMPORTED_MODULE_14__["default"].setCookie('hpv_usertoken39200', res.token, 30);
+                  easy_cookie_manager__WEBPACK_IMPORTED_MODULE_14___default.a.setCookie('hpv_usertoken39200', res.token, 30);
                 } else if (res.message) {
                   console.log(res.message);
                   this.setState({
@@ -10343,53 +10388,6 @@ function (_App) {
 }(next_app__WEBPACK_IMPORTED_MODULE_12___default.a);
 
 /* harmony default export */ __webpack_exports__["default"] = (MyApp);
-
-/***/ }),
-
-/***/ "./utilities/cookies_functions.js":
-/*!****************************************!*\
-  !*** ./utilities/cookies_functions.js ***!
-  \****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-var cookie_functions = {
-  setCookie: function setCookie(cname, cvalue, exdays) {
-    var d = new Date();
-    d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
-    var expires = 'expires=' + d.toUTCString();
-    document.cookie = cname + '=' + cvalue + ';' + expires + '; samesite=strict; path=/';
-  },
-  getCookie: function getCookie(cname) {
-    var name = cname + '=';
-    var ca = document.cookie.split(';');
-
-    for (var i = 0; i < ca.length; i++) {
-      var c = ca[i];
-
-      while (c.charAt(0) == ' ') {
-        c = c.substring(1);
-      }
-
-      if (c.indexOf(name) == 0) {
-        return c.substring(name.length, c.length);
-      }
-    }
-
-    return '';
-  },
-  deleteCookie: function deleteCookie(cname) {
-    console.log('delete cookie called');
-    cname = cname.toString();
-    var d = new Date();
-    d.setTime(d.getTime() + -5 * 24 * 60 * 60 * 1000);
-    var expires = 'expires=' + d.toUTCString();
-    document.cookie = cname + '=' + ' ' + ';' + expires + '; samesite=strict; path=/';
-  }
-};
-/* harmony default export */ __webpack_exports__["default"] = (cookie_functions);
 
 /***/ }),
 

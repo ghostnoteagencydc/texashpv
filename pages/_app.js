@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '../components/header'
 import App, { Container } from 'next/app'
 import fetch from 'isomorphic-unfetch'
-import _Cookies from '../utilities/cookies_functions'
+import _Cookies from 'easy-cookie-manager'
 
 import '../components/shared.css'
 
