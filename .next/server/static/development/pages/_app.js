@@ -1257,6 +1257,7 @@ function (_App) {
       loginErrorMessage: ''
     };
     _this.getLogin = _this.getLogin.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_8__["default"])(_this));
+    _this.checkTokenFromCookie = _this.checkTokenFromCookie.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_8__["default"])(_this));
     return _this;
   }
 
@@ -1296,10 +1297,10 @@ function (_App) {
 
                 if (cleanRes.code == 'jwt_auth_valid_token') {
                   console.log(cleanRes);
-                  this.setstate = {
+                  this.setState({
                     userToken: token,
                     isLoggedIn: true
-                  };
+                  });
                   this.getUserInfo(token);
                 }
 
@@ -1447,14 +1448,14 @@ function (_App) {
       return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(next_app__WEBPACK_IMPORTED_MODULE_12__["Container"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 122
+          lineNumber: 123
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_header__WEBPACK_IMPORTED_MODULE_11__["default"], {
         menudata: this.props.menudata,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 123
+          lineNumber: 124
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
@@ -1467,7 +1468,7 @@ function (_App) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 124
+          lineNumber: 125
         },
         __self: this
       })));

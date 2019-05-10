@@ -3998,7 +3998,7 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      console.log(this.props.loginData.userData);
+      console.log(this.props.loginData);
       return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
@@ -4006,19 +4006,25 @@ function (_Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 27
+        },
+        __self: this
+      }, this.props.loginData.isLoggedIn ? "You are logged in as ".concat(this.props.loginData.userData.username) : 'You are not logged in'), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", {
         dangerouslySetInnerHTML: {
           __html: this.props.loginData.loginErrorMessage
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 32
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("form", {
         onSubmit: this.handleSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 37
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("input", {
@@ -4030,7 +4036,7 @@ function (_Component) {
         onChange: this.handleInput,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 38
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("input", {
@@ -4042,14 +4048,14 @@ function (_Component) {
         onChange: this.handleInput,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 46
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("button", {
         type: "submit",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 54
         },
         __self: this
       }, "submit")));
@@ -4063,7 +4069,7 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 5:
+/***/ 2:
 /*!**************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Flogin&absolutePagePath=%2FUsers%2Fapoc%2FDocuments%2Fwork%2Ftexashpv%2Fpages%2Flogin.js ***!
   \**************************************************************************************************************************************/
@@ -4086,5 +4092,5 @@ module.exports = dll_1aef2d0bbc0d334d831c;
 
 /***/ })
 
-},[[5,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=login.js.map

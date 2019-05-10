@@ -16,6 +16,7 @@ class MyApp extends App {
       loginErrorMessage: ''
     }
     this.getLogin = this.getLogin.bind(this)
+    this.checkTokenFromCookie = this.checkTokenFromCookie.bind(this)
   }
   static async getInitialProps({ Component, ctx }) {
     let pageProps = {}
@@ -50,10 +51,10 @@ class MyApp extends App {
       const cleanRes = await res.json()
       if (cleanRes.code == 'jwt_auth_valid_token') {
         console.log(cleanRes)
-        this.setstate = {
+        this.setState({
           userToken: token,
           isLoggedIn: true
-        }
+        })
 
         this.getUserInfo(token)
       }

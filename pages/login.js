@@ -21,9 +21,14 @@ class Login extends Component {
     })
   }
   render() {
-    console.log(this.props.loginData.userData)
+    console.log(this.props.loginData)
     return (
       <div>
+        <p>
+          {this.props.loginData.isLoggedIn
+            ? `You are logged in as ${this.props.loginData.userData.username}`
+            : 'You are not logged in'}
+        </p>
         <p
           dangerouslySetInnerHTML={{
             __html: this.props.loginData.loginErrorMessage
