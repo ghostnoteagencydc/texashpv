@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import CalendarView from '../components/Calendar/CalendarView'
+import CalendarAddEvent from '../components/Calendar/CalendarAddEvent'
 import './calendar.css'
 
 class Calender extends Component {
@@ -13,7 +14,8 @@ class Calender extends Component {
   render() {
     return (
       <div>
-        <CalendarView events={this.props.events} />
+        <CalendarAddEvent {...this.props} />
+        <CalendarView events={this.props.events} {...this.props} />
       </div>
     )
   }

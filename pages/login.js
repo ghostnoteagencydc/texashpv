@@ -10,7 +10,7 @@ class Login extends Component {
     this.handleInput = this.handleInput.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
-  async handleSubmit(e) {
+  handleSubmit(e) {
     e.preventDefault()
     this.props.getLogin(this.state.username, this.state.password)
   }

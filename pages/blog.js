@@ -35,7 +35,7 @@ class Blog extends Component {
                   'https://designshack.net/wp-content/uploads/placeholder-image.png'
               }
               return (
-                <Link href={`/post?slug=${p.slug}`}>
+                <Link href={`/post?slug=${p.slug}`} key={i}>
                   <div
                     className="post-box"
                     key={i}
@@ -68,7 +68,7 @@ class Blog extends Component {
                         dangerouslySetInnerHTML={{ __html: p.excerpt }}
                       />
                       <div className="post-box-read-button">
-                        <span>Read Post</span> <i class="fas fa-arrow-right" />
+                        <span>Read Post</span> <i className="fas fa-arrow-right" />
                       </div>
                     </div>
                   </div>

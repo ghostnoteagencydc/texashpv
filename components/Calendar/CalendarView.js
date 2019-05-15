@@ -18,9 +18,11 @@ class MyCalendar extends Component {
   }
 
   componentDidMount() {
+    console.log(this.props)
     if (this.props.events) {
       var parsed = this.props.events.map(e => {
-        console.log(e.acf)
+   if(e.acf && e.acf.approved){
+
         var obj = {
           id: e.id,
           title: e.title,
@@ -31,6 +33,7 @@ class MyCalendar extends Component {
         }
         console.log(obj)
         return obj
+      }  
       })
       this.setState({
         events: parsed
