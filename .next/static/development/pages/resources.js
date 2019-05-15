@@ -1,4 +1,170 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\index.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\resources.js"],{
+
+/***/ "./components/Resources/resourcebuttons.js":
+/*!*************************************************!*\
+  !*** ./components/Resources/resourcebuttons.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ResourceButtons; });
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+
+
+
+
+
+
+var _jsxFileName = "D:\\Ghost Note React\\texashpv\\components\\Resources\\resourcebuttons.js";
+
+
+var ResourceButtons =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(ResourceButtons, _React$Component);
+
+  function ResourceButtons(props) {
+    var _this;
+
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, ResourceButtons);
+
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(ResourceButtons).call(this, props));
+    _this.handleClick = _this.handleClick.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
+    return _this;
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(ResourceButtons, [{
+    key: "handleClick",
+    value: function handleClick(e) {
+      var hiddenItems = document.querySelectorAll('.hidden');
+
+      if (hiddenItems) {
+        hiddenItems.forEach(function (item) {
+          item.classList.remove('hidden');
+        });
+      }
+
+      var filterClass = e.currentTarget.getAttribute('data-name');
+      var listOfItems = document.querySelectorAll(".resource-item:not(.".concat(filterClass, ")"));
+      console.log(listOfItems);
+      listOfItems.forEach(function (item) {
+        item.classList.add('hidden');
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "categories-container",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 25
+        },
+        __self: this
+      }, this.props.data.map(function (item, i) {
+        return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+          key: i,
+          "data-name": "".concat(item.slug),
+          onClick: function onClick(e) {
+            return _this2.handleClick(e);
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 27
+          },
+          __self: this
+        }, item.name);
+      }));
+    }
+  }]);
+
+  return ResourceButtons;
+}(react__WEBPACK_IMPORTED_MODULE_6___default.a.Component);
+
+
+
+/***/ }),
+
+/***/ "./components/Resources/resourcecatgories.js":
+/*!***************************************************!*\
+  !*** ./components/Resources/resourcecatgories.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ResourceCategories; });
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
+
+var _jsxFileName = "D:\\Ghost Note React\\texashpv\\components\\Resources\\resourcecatgories.js";
+
+
+var ResourceCategories =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(ResourceCategories, _React$Component);
+
+  function ResourceCategories() {
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, ResourceCategories);
+
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(ResourceCategories).apply(this, arguments));
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(ResourceCategories, [{
+    key: "render",
+    value: function render() {
+      if (this.props.data) {
+        return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+          className: "categories-container",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 5
+          },
+          __self: this
+        }, this.props.data.map(function (item, i) {
+          return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
+            key: i,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 7
+            },
+            __self: this
+          }, item.name);
+        }));
+      } else {
+        return null;
+      }
+    }
+  }]);
+
+  return ResourceCategories;
+}(react__WEBPACK_IMPORTED_MODULE_5___default.a.Component);
+
+
+
+/***/ }),
 
 /***/ "./components/header.js":
 /*!******************************!*\
@@ -168,10 +334,10 @@ function (_React$Component) {
             lineNumber: 5
           },
           __self: this
-        }, console.log(this.props.data), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("ul", {
+        }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("ul", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 7
+            lineNumber: 6
           },
           __self: this
         }, this.props.data.map(function (menuitem, i) {
@@ -179,14 +345,14 @@ function (_React$Component) {
             key: i,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 9
+              lineNumber: 8
             },
             __self: this
           }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
             href: menuitem.url,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 9
+              lineNumber: 8
             },
             __self: this
           }, menuitem.title));
@@ -5754,21 +5920,21 @@ exports.formatWithValidation = formatWithValidation;
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=D%3A%5CGhost%20Note%20React%5Ctexashpv%5Cpages%5Cindex.js!./":
-/*!**********************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=D%3A%5CGhost%20Note%20React%5Ctexashpv%5Cpages%5Cindex.js ***!
-  \**********************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fresources&absolutePagePath=D%3A%5CGhost%20Note%20React%5Ctexashpv%5Cpages%5Cresources.js!./":
+/*!***********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fresources&absolutePagePath=D%3A%5CGhost%20Note%20React%5Ctexashpv%5Cpages%5Cresources.js ***!
+  \***********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/", function() {
-      var page = __webpack_require__(/*! ./pages/index.js */ "./pages/index.js")
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/resources", function() {
+      var page = __webpack_require__(/*! ./pages/resources.js */ "./pages/resources.js")
       if(true) {
-        module.hot.accept(/*! ./pages/index.js */ "./pages/index.js", function() {
-          if(!next.router.components["/"]) return
-          var updatedPage = __webpack_require__(/*! ./pages/index.js */ "./pages/index.js")
-          next.router.update("/", updatedPage.default || updatedPage)
+        module.hot.accept(/*! ./pages/resources.js */ "./pages/resources.js", function() {
+          if(!next.router.components["/resources"]) return
+          var updatedPage = __webpack_require__(/*! ./pages/resources.js */ "./pages/resources.js")
+          next.router.update("/resources", updatedPage.default || updatedPage)
         })
       }
       return { page: page.default || page }
@@ -10028,10 +10194,10 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./pages/index.js":
-/*!************************!*\
-  !*** ./pages/index.js ***!
-  \************************/
+/***/ "./pages/resources.js":
+/*!****************************!*\
+  !*** ./pages/resources.js ***!
+  \****************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -10040,112 +10206,269 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
 /* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/header */ "./components/header.js");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/isomorphic-unfetch/browser.js");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/isomorphic-unfetch/browser.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/header */ "./components/header.js");
+/* harmony import */ var _components_Resources_resourcebuttons__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/Resources/resourcebuttons */ "./components/Resources/resourcebuttons.js");
+/* harmony import */ var _components_Resources_resourcecatgories__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/Resources/resourcecatgories */ "./components/Resources/resourcecatgories.js");
+/* harmony import */ var _css_resources_css__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../css/resources.css */ "./css/resources.css");
+/* harmony import */ var _css_resources_css__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_css_resources_css__WEBPACK_IMPORTED_MODULE_13__);
 
 
-var _jsxFileName = "D:\\Ghost Note React\\texashpv\\pages\\index.js";
 
 
 
 
 
-var Index = function Index(props) {
-  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("main", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_header__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    menudata: props.menudata,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("section", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    href: "/about",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10
-    },
-    __self: this
-  }, "Go to About Me"))));
-};
+var _jsxFileName = "D:\\Ghost Note React\\texashpv\\pages\\resources.js";
 
-Index.getInitialProps =
+
+
+
+
+
+
+
+var Resources =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__["default"])(Resources, _React$Component);
+
+  function Resources(props) {
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Resources);
+
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(Resources).call(this, props));
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__["default"])(Resources, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("main", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 37
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_header__WEBPACK_IMPORTED_MODULE_10__["default"], {
+        menudata: this.props.menudata,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 38
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("section", {
+        className: "resources-filters",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 39
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_Resources_resourcebuttons__WEBPACK_IMPORTED_MODULE_11__["default"], {
+        data: this.props.filtersdata,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 40
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("section", {
+        className: "resources-container",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 42
+        },
+        __self: this
+      }, this.props.resources.map(function (item) {
+        var termArr = [];
+
+        if (item.terms) {
+          item.terms.forEach(function (term) {
+            termArr.push(term.slug);
+          });
+        }
+
+        var termStr = termArr.join(' ');
+        return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+          href: item.permalink,
+          className: "resource-item ".concat(termStr),
+          key: item.id,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 52
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 53
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h1", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 54
+          },
+          __self: this
+        }, item.title), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_Resources_resourcecatgories__WEBPACK_IMPORTED_MODULE_12__["default"], {
+          data: item.terms,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 55
+          },
+          __self: this
+        })));
+      })));
+    }
+  }], [{
+    key: "getInitialProps",
+    value: function () {
+      var _getInitialProps = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
+      /*#__PURE__*/
+      _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+        var res, menu, filters, data, menudata, filtersdata, filteredres;
+        return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_9___default()('https://hpvtexas.wpengine.com/wp-json/better-rest-endpoints/v1/resource');
+
+              case 2:
+                res = _context.sent;
+                _context.next = 5;
+                return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_9___default()('https://hpvtexas.wpengine.com/wp-json/better-rest-endpoints/v1/menus/main');
+
+              case 5:
+                menu = _context.sent;
+                _context.next = 8;
+                return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_9___default()('https://hpvtexas.wpengine.com/wp-json/wp/v2/resource_type');
+
+              case 8:
+                filters = _context.sent;
+                _context.next = 11;
+                return res.json();
+
+              case 11:
+                data = _context.sent;
+                _context.next = 14;
+                return menu.json();
+
+              case 14:
+                menudata = _context.sent;
+                _context.next = 17;
+                return filters.json();
+
+              case 17:
+                filtersdata = _context.sent;
+                _context.next = 20;
+                return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_9___default()('https://hpvtexas.wpengine.com/wp-json/wp/v2/resource?filter[resource_type]=resource-type-2');
+
+              case 20:
+                filteredres = _context.sent;
+                return _context.abrupt("return", {
+                  resources: data,
+                  menudata: menudata,
+                  filtersdata: filtersdata
+                });
+
+              case 22:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }));
+
+      function getInitialProps() {
+        return _getInitialProps.apply(this, arguments);
+      }
+
+      return getInitialProps;
+    }()
+  }]);
+
+  return Resources;
+}(react__WEBPACK_IMPORTED_MODULE_7___default.a.Component);
+
+;
+Resources.getInitialProps =
 /*#__PURE__*/
 Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
 /*#__PURE__*/
-_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-  var res, menu, data, menudata;
-  return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
+  var res, menu, filters, data, menudata, filtersdata, filteredres;
+  return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
     while (1) {
-      switch (_context.prev = _context.next) {
+      switch (_context2.prev = _context2.next) {
         case 0:
-          _context.next = 2;
-          return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5___default()('https://hpvtexas.wpengine.com/wp-json/better-rest-endpoints/v1/pages');
+          _context2.next = 2;
+          return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_9___default()('https://hpvtexas.wpengine.com/wp-json/better-rest-endpoints/v1/resource');
 
         case 2:
-          res = _context.sent;
-          _context.next = 5;
-          return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5___default()('https://hpvtexas.wpengine.com/wp-json/better-rest-endpoints/v1/menus/main');
+          res = _context2.sent;
+          _context2.next = 5;
+          return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_9___default()('https://hpvtexas.wpengine.com/wp-json/better-rest-endpoints/v1/menus/main');
 
         case 5:
-          menu = _context.sent;
-          _context.next = 8;
-          return res.json();
+          menu = _context2.sent;
+          _context2.next = 8;
+          return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_9___default()('https://hpvtexas.wpengine.com/wp-json/wp/v2/resource_type');
 
         case 8:
-          data = _context.sent;
-          _context.next = 11;
-          return menu.json();
+          filters = _context2.sent;
+          _context2.next = 11;
+          return res.json();
 
         case 11:
-          menudata = _context.sent;
-          console.log("Show data fetched. Count: ".concat(data.length));
-          return _context.abrupt("return", {
-            shows: data,
-            menudata: menudata
-          });
+          data = _context2.sent;
+          _context2.next = 14;
+          return menu.json();
 
         case 14:
+          menudata = _context2.sent;
+          _context2.next = 17;
+          return filters.json();
+
+        case 17:
+          filtersdata = _context2.sent;
+          _context2.next = 20;
+          return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_9___default()('https://hpvtexas.wpengine.com/wp-json/wp/v2/resource?filter[resource_type]=resource-type-2');
+
+        case 20:
+          filteredres = _context2.sent;
+          return _context2.abrupt("return", {
+            resources: data,
+            menudata: menudata,
+            filtersdata: filtersdata
+          });
+
+        case 22:
         case "end":
-          return _context.stop();
+          return _context2.stop();
       }
     }
-  }, _callee);
+  }, _callee2);
 }));
-/* harmony default export */ __webpack_exports__["default"] = (Index);
+/* harmony default export */ __webpack_exports__["default"] = (Resources);
 
 /***/ }),
 
-/***/ 0:
-/*!**************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=D%3A%5CGhost%20Note%20React%5Ctexashpv%5Cpages%5Cindex.js ***!
-  \**************************************************************************************************************************/
+/***/ 2:
+/*!***************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fresources&absolutePagePath=D%3A%5CGhost%20Note%20React%5Ctexashpv%5Cpages%5Cresources.js ***!
+  \***************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=D%3A%5CGhost%20Note%20React%5Ctexashpv%5Cpages%5Cindex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=D%3A%5CGhost%20Note%20React%5Ctexashpv%5Cpages%5Cindex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fresources&absolutePagePath=D%3A%5CGhost%20Note%20React%5Ctexashpv%5Cpages%5Cresources.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fresources&absolutePagePath=D%3A%5CGhost%20Note%20React%5Ctexashpv%5Cpages%5Cresources.js!./");
 
 
 /***/ }),
@@ -10161,5 +10484,5 @@ module.exports = dll_6dc2816e14fab51b8269;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js","styles"]]]);
-//# sourceMappingURL=index.js.map
+},[[2,"static/runtime/webpack.js","styles"]]]);
+//# sourceMappingURL=resources.js.map
