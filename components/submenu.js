@@ -5,7 +5,9 @@ class Submenu extends React.Component {
                 <div className="submenu">
                     <ul>
                         {this.props.data.map((menuitem, i) => (
-                            <li key={i}><a href={menuitem.url}>{menuitem.title}</a></li>
+                            <li key={i}>
+                                <a href={menuitem.url}>{menuitem.title}</a>
+                            </li>
                         ))}
                     </ul>
                 </div>

@@ -287,14 +287,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _submenu__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./submenu */ "./components/submenu.js");
-/* harmony import */ var _header_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./header.css */ "./components/header.css");
-/* harmony import */ var _header_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_header_css__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/head */ "next/head");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _header_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./header.css */ "./components/header.css");
+/* harmony import */ var _header_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_header_css__WEBPACK_IMPORTED_MODULE_8__);
 
 
 
 
 
 var _jsxFileName = "D:\\Ghost Note React\\texashpv\\components\\header.js";
+
 
 
 
@@ -313,75 +316,95 @@ function (_React$Component) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Header, [{
     key: "render",
     value: function render() {
-      var menu = {};
-      this.props.menudata.forEach(function (item) {
-        if (item.menu_item_parent == 0) {
-          if (!menu['parentMenu']) {
-            menu['parentMenu'] = [{
-              id: item.ID,
-              title: item.title,
-              url: item.url
-            }];
-            menu[item.ID] = [];
+      if (this.props.menudata) {
+        var menu = {};
+        this.props.menudata.forEach(function (item) {
+          if (item.menu_item_parent == 0) {
+            if (!menu['parentMenu']) {
+              menu['parentMenu'] = [{
+                id: item.ID,
+                title: item.title,
+                url: item.url
+              }];
+              menu[item.ID] = [];
+            } else {
+              menu['parentMenu'].push({
+                id: item.ID,
+                title: item.title,
+                url: item.url
+              });
+              menu[item.ID] = [];
+            }
           } else {
-            menu['parentMenu'].push({
-              id: item.ID,
+            menu[item.menu_item_parent].push({
               title: item.title,
               url: item.url
             });
-            menu[item.ID] = [];
           }
-        } else {
-          menu[item.menu_item_parent].push({
-            title: item.title,
-            url: item.url
-          });
-        }
-      });
-      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("header", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 22
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 23
-        },
-        __self: this
-      }, "Client Logo Here"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "navmenu",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 24
-        },
-        __self: this
-      }, menu.parentMenu.map(function (menuitem) {
-        return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-          key: menuitem.id,
-          className: "parentnav-item",
+        });
+        return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("header", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 30
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_7___default.a, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 31
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
+          rel: "stylesheet",
+          href: "https://use.fontawesome.com/releases/v5.8.2/css/all.css",
+          integrity: "sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay",
+          crossorigin: "anonymous",
           __source: {
             fileName: _jsxFileName,
             lineNumber: 32
           },
           __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
-          href: menuitem.url,
+        })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 33
+            lineNumber: 39
           },
           __self: this
-        }, menuitem.title), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_submenu__WEBPACK_IMPORTED_MODULE_6__["default"], {
-          data: menu[menuitem.id],
+        }, "Client Logo Here"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+          className: "navmenu",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 34
+            lineNumber: 40
           },
           __self: this
-        }));
-      })));
+        }, menu.parentMenu.map(function (menuitem) {
+          return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+            key: menuitem.id,
+            className: "parentnav-item",
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 48
+            },
+            __self: this
+          }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+            href: menuitem.url,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 49
+            },
+            __self: this
+          }, menuitem.title), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_submenu__WEBPACK_IMPORTED_MODULE_6__["default"], {
+            data: menu[menuitem.id],
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 50
+            },
+            __self: this
+          }));
+        })));
+      } else {
+        return null;
+      }
     }
   }]);
 
@@ -456,7 +479,7 @@ function (_React$Component) {
             href: menuitem.url,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 8
+              lineNumber: 9
             },
             __self: this
           }, menuitem.title));
@@ -1710,6 +1733,17 @@ module.exports = require("isomorphic-unfetch");
 /***/ (function(module, exports) {
 
 module.exports = require("next-server/dist/lib/utils");
+
+/***/ }),
+
+/***/ "next/head":
+/*!****************************!*\
+  !*** external "next/head" ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next/head");
 
 /***/ }),
 
