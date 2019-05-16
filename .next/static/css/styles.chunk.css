@@ -25,29 +25,22 @@ header {
     list-style-type: none;
     padding: 0;
 }
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 16px;
+  /* Dark Mode: */
+  /* background: #403f3f; */
+  /* color: #fff; */
+
+  background: #fff;
+}
+
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-.resources-container {
-    /* display: flex;
-    flex-wrap: wrap; */
-    padding: 0 10%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
-    grid-gap: 5%;
-}
-a.resource-item {
-    box-shadow: 0px 3px 6px #00000036;
-    transition: all .2s ease-in-out;
-    padding: 2.5% 4%;
-    width: 100%;
-}
-a.resource-item:hover {
-    box-shadow: 0px 3px 6px #398ecab3;
-}
-.resource-item.hidden {
-    display: none;
-}
+
 
 /*# sourceMappingURL=styles.chunk.css.map*/

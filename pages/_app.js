@@ -16,6 +16,7 @@ class MyApp extends App {
       loginErrorMessage: ''
     }
     this.getLogin = this.getLogin.bind(this)
+    this.logout = this.logout.bind(this)
     this.checkTokenFromCookie = this.checkTokenFromCookie.bind(this)
   }
   static async getInitialProps({ Component, ctx }) {
@@ -117,6 +118,16 @@ class MyApp extends App {
     console.log(res)
   }
 
+  logout() {
+    console.log('logging out')
+    this.setState({
+      userToken: '',
+      isLoggedIn: false
+    })
+    _Cookies.deleteCookie('hpv_usertoken39200')
+    console.log('logged out')
+  }
+
   render() {
     const { Component, pageProps } = this.props
     return (
@@ -125,6 +136,7 @@ class MyApp extends App {
         <Component
           {...pageProps}
           getLogin={this.getLogin}
+          logout={this.logout}
           loginData={{
             isLoggedIn: this.state.isLoggedIn,
             userToken: this.state.userToken,
