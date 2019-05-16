@@ -1,226 +1,119 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["styles"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["styles"], {
 
 /***/ "./components/header.css":
 /*!*******************************!*\
   !*** ./components/header.css ***!
   \*******************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function (module, exports, __webpack_require__) {
 
-// extracted by mini-css-extract-plugin;
-    if (true) {
-      var injectCss = function injectCss(prev, href) {
-        var link = prev.cloneNode();
-        link.href = href;
-        link.onload = function() {
-          prev.parentNode.removeChild(prev);
+      // extracted by mini-css-extract-plugin;
+      if (true) {
+        var injectCss = function injectCss(prev, href) {
+          var link = prev.cloneNode();
+          link.href = href;
+          link.onload = function () {
+            prev.parentNode.removeChild(prev);
+          };
+          prev.stale = true;
+          prev.parentNode.insertBefore(link, prev);
         };
-        prev.stale = true;
-        prev.parentNode.insertBefore(link, prev);
-      };
-      module.hot.dispose(function() {
-        window.__webpack_reload_css__ = true;
-      });
-      if (window.__webpack_reload_css__) {
-        module.hot.__webpack_reload_css__ = false;
-        console.log("[HMR] Reloading stylesheets...");
-        var prefix = document.location.protocol + '//' + document.location.host;
-        document
-          .querySelectorAll("link[href][rel=stylesheet]")
-          .forEach(function(link) {
-            if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1557949301306");
-          });
+        module.hot.dispose(function () {
+          window.__webpack_reload_css__ = true;
+        });
+        if (window.__webpack_reload_css__) {
+          module.hot.__webpack_reload_css__ = false;
+          console.log("[HMR] Reloading stylesheets...");
+          var prefix = document.location.protocol + '//' + document.location.host;
+          document
+            .querySelectorAll("link[href][rel=stylesheet]")
+            .forEach(function (link) {
+              if (!link.href.match(prefix) || link.stale) return;
+              injectCss(link, link.href.split("?")[0] + "?unix=1557949301306");
+            });
+        }
       }
-    }
-  
 
-/***/ }),
+
+      /***/
+}),
 
 /***/ "./components/shared.css":
 /*!*******************************!*\
   !*** ./components/shared.css ***!
   \*******************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function (module, exports, __webpack_require__) {
 
-// extracted by mini-css-extract-plugin;
-    if (true) {
-      var injectCss = function injectCss(prev, href) {
-        var link = prev.cloneNode();
-        link.href = href;
-        link.onload = function() {
-          prev.parentNode.removeChild(prev);
+      // extracted by mini-css-extract-plugin;
+      if (true) {
+        var injectCss = function injectCss(prev, href) {
+          var link = prev.cloneNode();
+          link.href = href;
+          link.onload = function () {
+            prev.parentNode.removeChild(prev);
+          };
+          prev.stale = true;
+          prev.parentNode.insertBefore(link, prev);
         };
-        prev.stale = true;
-        prev.parentNode.insertBefore(link, prev);
-      };
-      module.hot.dispose(function() {
-        window.__webpack_reload_css__ = true;
-      });
-      if (window.__webpack_reload_css__) {
-        module.hot.__webpack_reload_css__ = false;
-        console.log("[HMR] Reloading stylesheets...");
-        var prefix = document.location.protocol + '//' + document.location.host;
-        document
-          .querySelectorAll("link[href][rel=stylesheet]")
-          .forEach(function(link) {
-            if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1557949301283");
-          });
+        module.hot.dispose(function () {
+          window.__webpack_reload_css__ = true;
+        });
+        if (window.__webpack_reload_css__) {
+          module.hot.__webpack_reload_css__ = false;
+          console.log("[HMR] Reloading stylesheets...");
+          var prefix = document.location.protocol + '//' + document.location.host;
+          document
+            .querySelectorAll("link[href][rel=stylesheet]")
+            .forEach(function (link) {
+              if (!link.href.match(prefix) || link.stale) return;
+              injectCss(link, link.href.split("?")[0] + "?unix=1557949301283");
+              injectCss(link, link.href.split("?")[0] + "?unix=1558014853971");
+            });
+        }
       }
-    }
-  
 
-/***/ }),
 
-/***/ "./css/resources.css":
-/*!***************************!*\
-  !*** ./css/resources.css ***!
-  \***************************/
+      /***/
+}),
+
+/***/ "./components/shared.css":
+/*!*******************************!*\
+  !*** ./components/shared.css ***!
+  \*******************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function (module, exports, __webpack_require__) {
 
-// extracted by mini-css-extract-plugin;
-    if (true) {
-      var injectCss = function injectCss(prev, href) {
-        var link = prev.cloneNode();
-        link.href = href;
-        link.onload = function() {
-          prev.parentNode.removeChild(prev);
+      // extracted by mini-css-extract-plugin;
+      if (true) {
+        var injectCss = function injectCss(prev, href) {
+          var link = prev.cloneNode();
+          link.href = href;
+          link.onload = function () {
+            prev.parentNode.removeChild(prev);
+          };
+          prev.stale = true;
+          prev.parentNode.insertBefore(link, prev);
         };
-        prev.stale = true;
-        prev.parentNode.insertBefore(link, prev);
-      };
-      module.hot.dispose(function() {
-        window.__webpack_reload_css__ = true;
-      });
-      if (window.__webpack_reload_css__) {
-        module.hot.__webpack_reload_css__ = false;
-        console.log("[HMR] Reloading stylesheets...");
-        var prefix = document.location.protocol + '//' + document.location.host;
-        document
-          .querySelectorAll("link[href][rel=stylesheet]")
-          .forEach(function(link) {
-            if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1558018563358");
-          });
+        module.hot.dispose(function () {
+          window.__webpack_reload_css__ = true;
+        });
+        if (window.__webpack_reload_css__) {
+          module.hot.__webpack_reload_css__ = false;
+          console.log("[HMR] Reloading stylesheets...");
+          var prefix = document.location.protocol + '//' + document.location.host;
+          document
+            .querySelectorAll("link[href][rel=stylesheet]")
+            .forEach(function (link) {
+              if (!link.href.match(prefix) || link.stale) return;
+              injectCss(link, link.href.split("?")[0] + "?unix=1558014853957");
+            });
+        }
       }
-    }
-  
 
-/***/ }),
 
-/***/ "./node_modules/react-big-calendar/lib/css/react-big-calendar.css":
-/*!************************************************************************!*\
-  !*** ./node_modules/react-big-calendar/lib/css/react-big-calendar.css ***!
-  \************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin;
-    if (true) {
-      var injectCss = function injectCss(prev, href) {
-        var link = prev.cloneNode();
-        link.href = href;
-        link.onload = function() {
-          prev.parentNode.removeChild(prev);
-        };
-        prev.stale = true;
-        prev.parentNode.insertBefore(link, prev);
-      };
-      module.hot.dispose(function() {
-        window.__webpack_reload_css__ = true;
-      });
-      if (window.__webpack_reload_css__) {
-        module.hot.__webpack_reload_css__ = false;
-        console.log("[HMR] Reloading stylesheets...");
-        var prefix = document.location.protocol + '//' + document.location.host;
-        document
-          .querySelectorAll("link[href][rel=stylesheet]")
-          .forEach(function(link) {
-            if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1558017868691");
-          });
-      }
-    }
-  
-
-/***/ }),
-
-/***/ "./node_modules/react-datepicker/dist/react-datepicker.css":
-/*!*****************************************************************!*\
-  !*** ./node_modules/react-datepicker/dist/react-datepicker.css ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin;
-    if (true) {
-      var injectCss = function injectCss(prev, href) {
-        var link = prev.cloneNode();
-        link.href = href;
-        link.onload = function() {
-          prev.parentNode.removeChild(prev);
-        };
-        prev.stale = true;
-        prev.parentNode.insertBefore(link, prev);
-      };
-      module.hot.dispose(function() {
-        window.__webpack_reload_css__ = true;
-      });
-      if (window.__webpack_reload_css__) {
-        module.hot.__webpack_reload_css__ = false;
-        console.log("[HMR] Reloading stylesheets...");
-        var prefix = document.location.protocol + '//' + document.location.host;
-        document
-          .querySelectorAll("link[href][rel=stylesheet]")
-          .forEach(function(link) {
-            if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1558017868837");
-          });
-      }
-    }
-  
-
-/***/ }),
-
-/***/ "./pages/calendar.css":
-/*!****************************!*\
-  !*** ./pages/calendar.css ***!
-  \****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin;
-    if (true) {
-      var injectCss = function injectCss(prev, href) {
-        var link = prev.cloneNode();
-        link.href = href;
-        link.onload = function() {
-          prev.parentNode.removeChild(prev);
-        };
-        prev.stale = true;
-        prev.parentNode.insertBefore(link, prev);
-      };
-      module.hot.dispose(function() {
-        window.__webpack_reload_css__ = true;
-      });
-      if (window.__webpack_reload_css__) {
-        module.hot.__webpack_reload_css__ = false;
-        console.log("[HMR] Reloading stylesheets...");
-        var prefix = document.location.protocol + '//' + document.location.host;
-        document
-          .querySelectorAll("link[href][rel=stylesheet]")
-          .forEach(function(link) {
-            if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1557949328963");
-          });
-      }
-    }
-  
-
-/***/ })
+      /***/
+})
 
 }]);
 //# sourceMappingURL=styles.js.map

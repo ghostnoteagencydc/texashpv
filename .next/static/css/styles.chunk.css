@@ -38,6 +38,7 @@ html {
   background: #fff;
 }
 
+<<<<<<< HEAD
 * {
   box-sizing: border-box;
 }
@@ -71,6 +72,10 @@ a.resource-item:hover {
 }
 .resource-item.hidden {
     display: none;
+=======
+* {
+  box-sizing: border-box;
+>>>>>>> 19edd54c8ec0faa5b238604562e962db493e97fb
 }
 .resource-item.filter-hidden {
     display: none;
@@ -1571,6 +1576,7 @@ button.rbc-input::-moz-focus-inner {
 .msg-error{
   color: red;
 }
+
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/
