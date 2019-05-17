@@ -1,7 +1,6 @@
-import Link from "next/link";
 import fetch from 'isomorphic-unfetch';
 
-import Header from "../components/header";
+import ResourceSearch from '../components/Resources/resourcesearch';
 import ResourceButtons from '../components/Resources/resourcebuttons';
 import ResourceCategories from '../components/Resources/resourcecatgories';
 
@@ -16,17 +15,14 @@ class Resources extends React.Component {
 
     static async getInitialProps() {
         const res = await fetch('https://hpvtexas.wpengine.com/wp-json/better-rest-endpoints/v1/resource');
-        const menu = await fetch('https://hpvtexas.wpengine.com/wp-json/better-rest-endpoints/v1/menus/main');
         const filters = await fetch('https://hpvtexas.wpengine.com/wp-json/wp/v2/resource_type');
         const data = await res.json()
-        const menudata = await menu.json()
         const filtersdata = await filters.json()
 
 
-        const filteredres = await fetch('https://hpvtexas.wpengine.com/wp-json/wp/v2/resource?filter[resource_type]=resource-type-2');
+        // const filteredres = await fetch('https://hpvtexas.wpengine.com/wp-json/wp/v2/resource?filter[resource_type]=resource-type-2');
         return {
             resources: data,
-            menudata,
             filtersdata
         }
     }
@@ -35,10 +31,8 @@ class Resources extends React.Component {
     render() {
         return (
             <main>
-                <Header menudata={this.props.menudata} />
-                <section className="resources-filters">
-                    <ResourceButtons data={this.props.filtersdata} />
-                </section>
+                <ResourceSearch />
+                <ResourceButtons data={this.props.filtersdata} />
                 <section className="resources-container">
                     {this.props.resources.map(item => {
                         let termArr = [];
@@ -51,7 +45,7 @@ class Resources extends React.Component {
                         return (
                             <a href={item.permalink} className={`resource-item ${termStr}`} key={item.id}>
                                 <div>
-                                    <h1>{item.title}</h1>
+                                    <h1 className="resource-title">{item.title}</h1>
                                     <ResourceCategories data={item.terms} />
                                 </div>
                             </a>
@@ -64,23 +58,5 @@ class Resources extends React.Component {
         )
     }
 };
-
-
-Resources.getInitialProps = async function () {
-    const res = await fetch('https://hpvtexas.wpengine.com/wp-json/better-rest-endpoints/v1/resource');
-    const menu = await fetch('https://hpvtexas.wpengine.com/wp-json/better-rest-endpoints/v1/menus/main');
-    const filters = await fetch('https://hpvtexas.wpengine.com/wp-json/wp/v2/resource_type');
-    const data = await res.json()
-    const menudata = await menu.json()
-    const filtersdata = await filters.json()
-
-
-    const filteredres = await fetch('https://hpvtexas.wpengine.com/wp-json/wp/v2/resource?filter[resource_type]=resource-type-2');
-    return {
-        resources: data,
-        menudata,
-        filtersdata
-    }
-}
 
 export default Resources;

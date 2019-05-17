@@ -130,7 +130,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+<<<<<<< HEAD
+var _jsxFileName = "D:\\Ghost Note React\\texashpv\\components\\header.js";
+=======
 var _jsxFileName = "/Users/apoc/Documents/work/texashpv/components/header.js";
+>>>>>>> 19edd54c8ec0faa5b238604562e962db493e97fb
 
 
 
@@ -281,7 +285,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+<<<<<<< HEAD
+var _jsxFileName = "D:\\Ghost Note React\\texashpv\\components\\submenu.js";
+=======
 var _jsxFileName = "/Users/apoc/Documents/work/texashpv/components/submenu.js";
+>>>>>>> 19edd54c8ec0faa5b238604562e962db493e97fb
 
 
 var Submenu =
@@ -1232,7 +1240,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+<<<<<<< HEAD
+var _jsxFileName = "D:\\Ghost Note React\\texashpv\\pages\\_app.js";
+=======
 var _jsxFileName = "/Users/apoc/Documents/work/texashpv/pages/_app.js";
+>>>>>>> 19edd54c8ec0faa5b238604562e962db493e97fb
 
 
 
@@ -1258,7 +1270,10 @@ function (_App) {
       loginErrorMessage: ''
     };
     _this.getLogin = _this.getLogin.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_8__["default"])(_this));
+<<<<<<< HEAD
+=======
     _this.logout = _this.logout.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_8__["default"])(_this));
+>>>>>>> 19edd54c8ec0faa5b238604562e962db493e97fb
     _this.checkTokenFromCookie = _this.checkTokenFromCookie.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_8__["default"])(_this));
     return _this;
   }
@@ -1442,6 +1457,8 @@ function (_App) {
       return getLogin;
     }()
   }, {
+<<<<<<< HEAD
+=======
     key: "logout",
     value: function logout() {
       console.log('logging out');
@@ -1455,6 +1472,7 @@ function (_App) {
       console.log('logged out');
     }
   }, {
+>>>>>>> 19edd54c8ec0faa5b238604562e962db493e97fb
     key: "render",
     value: function render() {
       var _this$props = this.props,
@@ -1463,19 +1481,30 @@ function (_App) {
       return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(next_app__WEBPACK_IMPORTED_MODULE_12__["Container"], {
         __source: {
           fileName: _jsxFileName,
+<<<<<<< HEAD
+          lineNumber: 123
+=======
           lineNumber: 134
+>>>>>>> 19edd54c8ec0faa5b238604562e962db493e97fb
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_header__WEBPACK_IMPORTED_MODULE_11__["default"], {
         menudata: this.props.menudata,
         __source: {
           fileName: _jsxFileName,
+<<<<<<< HEAD
+          lineNumber: 124
+=======
           lineNumber: 135
+>>>>>>> 19edd54c8ec0faa5b238604562e962db493e97fb
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
         getLogin: this.getLogin,
+<<<<<<< HEAD
+=======
         logout: this.logout,
+>>>>>>> 19edd54c8ec0faa5b238604562e962db493e97fb
         loginData: {
           isLoggedIn: this.state.isLoggedIn,
           userToken: this.state.userToken,
@@ -1484,7 +1513,11 @@ function (_App) {
         },
         __source: {
           fileName: _jsxFileName,
+<<<<<<< HEAD
+          lineNumber: 125
+=======
           lineNumber: 136
+>>>>>>> 19edd54c8ec0faa5b238604562e962db493e97fb
         },
         __self: this
       })));
@@ -1571,7 +1604,21 @@ function (_App) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! private-next-pages/_app.js */"./pages/_app.js");
+<<<<<<< HEAD
+=======
 
+
+/***/ }),
+
+/***/ "core-js/library/fn/json/stringify":
+/*!****************************************************!*\
+  !*** external "core-js/library/fn/json/stringify" ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+>>>>>>> 19edd54c8ec0faa5b238604562e962db493e97fb
+
+module.exports = require("core-js/library/fn/json/stringify");
 
 /***/ }),
 

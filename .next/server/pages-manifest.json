@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"/_app":"static/development/pages/_app.js","/_document":"static/development/pages/_document.js","/_error":"static/development/pages/_error.js","/blog":"static/development/pages/blog.js","/post":"static/development/pages/post.js"}
+=======
+{"/_app":"static/development/pages/_app.js","/_document":"static/development/pages/_document.js","/_error":"static/development/pages/_error.js","/index":"static/development/pages/index.js","/login":"static/development/pages/login.js","/":"static/development/pages/index.js"}
+>>>>>>> 455204041e85ff36fd863bde88bc26dce061c396

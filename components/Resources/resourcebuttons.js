@@ -6,23 +6,27 @@ export default class ResourceButtons extends React.Component {
     }
 
     handleClick(e) {
-        let hiddenItems = document.querySelectorAll('.hidden');
-        if (hiddenItems) {
-            hiddenItems.forEach(item => {
-                item.classList.remove('hidden');
+        if (e.currentTarget.classList.contains('active')) {
+            e.currentTarget.classList.remove('active')
+            let hiddenItems = document.querySelectorAll('.filter-hidden');
+            if (hiddenItems) {
+                hiddenItems.forEach(item => {
+                    item.classList.remove('filter-hidden');
+                })
+            }
+        } else {
+            e.currentTarget.classList.add('active')
+            let filterClass = e.currentTarget.getAttribute('data-name');
+            let listOfItems = document.querySelectorAll(`.resource-item:not(.${filterClass})`);
+            listOfItems.forEach(item => {
+                item.classList.add('filter-hidden');
             })
         }
-        let filterClass = e.currentTarget.getAttribute('data-name');
-        let listOfItems = document.querySelectorAll(`.resource-item:not(.${filterClass})`);
-        console.log(listOfItems);
-        listOfItems.forEach(item => {
-            item.classList.add('hidden');
-        })
     }
 
     render() {
         return (
-            <div className="categories-container">
+            <div className="filters-container">
                 {this.props.data.map((item, i) => (
                     <button key={i} data-name={`${item.slug}`} onClick={((e) => this.handleClick(e))}>{item.name}</button>
                 ))}
