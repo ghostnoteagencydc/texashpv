@@ -100,7 +100,7 @@ function (_React$Component) {
             lineNumber: 39
           },
           __self: this
-        }, "Client Logo Here"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        }, "HPV Roundtable"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
           className: "navmenu",
           __source: {
             fileName: _jsxFileName,

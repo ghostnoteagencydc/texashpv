@@ -42,5 +42,90 @@ html {
   box-sizing: border-box;
 }
 
+.posts-grid {
+  padding: 4em;
+  width: 100%;
+  max-width: 1000px;
+}
+.post-box {
+  padding: 2em;
+  border-radius: 5px;
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.19), 0 2px 6px rgba(0, 0, 0, 0.23);
+  display: flex;
+  margin-top: 2em;
+  position: relative;
+  cursor: pointer;
+  background: #fff;
+  /* Dark Mode: */
+  /* background: #525151; */
+}
+.post-box h3,
+p {
+  margin: 0;
+}
+
+.post-box-excerpt {
+  margin-top: 2em;
+  opacity: 0.5;
+}
+.post-box-image {
+  height: 150px;
+  width: 150px;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  left: -3.5em;
+  border-radius: 5px;
+}
+
+.post-box-title {
+  font-size: 1.4em;
+}
+
+.post-box-author {
+  color: #6ea6f1;
+  font-size: 0.9em;
+}
+
+.post-box-date {
+  font-size: 0.7em;
+  color: #6ea6f1;
+}
+
+.post-box-read-button {
+  text-align: right;
+  position: absolute;
+  bottom: 1em;
+  right: 2em;
+  color: #6ea6f1;
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+}
+.post-box-read-button i {
+  opacity: 0;
+  font-size: 1.5em;
+  transform: translateX(-0.5em);
+  transition: transform 0.2s ease-out, font-size 0.4s ease-in-out,
+    opacity 0.3s ease;
+}
+.post-box .post-box-read-button span {
+  display: block;
+  transform: translateX(1em);
+  transition: transform 0.1s ease-out;
+}
+
+.post-box:hover .post-box-read-button i {
+  opacity: 1;
+  transform: translateX(0.5em);
+}
+.post-box:hover .post-box-read-button span {
+  transform: translateX(0em);
+}
+
+a {
+  cursor: pointer;
+}
+
 
 /*# sourceMappingURL=styles.chunk.css.map*/

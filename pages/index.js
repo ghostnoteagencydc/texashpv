@@ -27,6 +27,10 @@ const Index = props => (
       <Link href="/calendar">
         <a>Go to Calendar</a>
       </Link>
+      <br />
+      <Link href="/members">
+        <a>Go to Members</a>
+      </Link>
     </section>
   </main>
 )

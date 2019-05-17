@@ -1,16 +1,17 @@
 .calendar-wrap {
   height: 80vh;
 }
-.calendar-add-event{
+.calendar-add-event {
   display: flex;
   flex-direction: column;
-  width: 50vw;
+  width: 100%;
   margin-bottom: 80px;
 }
 .calendar-add-event-form {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 .calendar-add-event-form label {
   display: inline-flex;
@@ -26,6 +27,44 @@
   margin-top: 2em;
   padding: 0.3em;
 }
+.calendar-left {
+  width: 25%;
+}
+.calendar-wrap {
+  width: 75%;
+  overflow: hidden;
+}
+.calendar-container {
+  display: flex;
+  padding: 20px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.calendar-popup {
+  background: #fff;
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.19), 0 2px 6px rgba(0, 0, 0, 0.23);
+  padding: 1em;
+  border-radius: 5px;
+  z-index: 999;
+  width: 300px;
+}
+.calendar-popup h2 {
+  margin: 0;
+}
+.calendar-popup p {
+  margin: 0.5em 0 0 0;
+}
+.rbc-event {
+  position: relative;
+}
+.custom-event-clicker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
 
 .react-datepicker-popper {
   z-index: 9999;
@@ -34,14 +73,28 @@
   margin-right: 0.5em;
 }
 
-.msg-field{
+.msg-field {
   opacity: 0;
 }
 
-.msg-field-shown{
+.msg-field-shown {
   opacity: 1 !important;
 }
 
-.msg-error{
+.msg-error {
   color: red;
+}
+.custom_event_content {
+  padding: 0 0.2em;
+}
+.custom_event_content h4 {
+  margin: 0;
+}
+.custom_event_content p {
+  margin: 0;
+  font-size: 0.8em;
+}
+
+.rbc-agenda-event-cell .custom-event-clicker {
+  display: none;
 }

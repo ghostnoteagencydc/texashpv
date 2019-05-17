@@ -36,7 +36,7 @@ class Header extends React.Component {
               crossorigin="anonymous"
             />
           </Head>
-          <h1>Client Logo Here</h1>
+          <h1>HPV Roundtable</h1>
           <div className="navmenu">
             {/* {parentMenu.map(menuitem => (
             <div>
